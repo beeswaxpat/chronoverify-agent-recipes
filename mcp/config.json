@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "chronoverify": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "chronoverify-mcp"
+      ],
+      "env": {
+        "CHRONOVERIFY_API_KEY": "cv_live_..."
+      }
+    }
+  }
+}

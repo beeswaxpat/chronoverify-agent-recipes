@@ -1,0 +1,26 @@
+{
+  "type": "function",
+  "function": {
+    "name": "chronoverify_verify_image",
+    "description": "Verify a photo's capture time and provenance: cryptographic C2PA Content Credentials validation against the official trust list, EXIF and XMP metadata consistency, and classical pixel forensics. Returns one verdict (provenance_confirmed, consistent, inconclusive, metadata_anomaly, or manipulation_indicated) with a 0 to 100 confidence. Provenance-first, NOT a deepfake or AI-generation detector; results are investigative triage, not proof. Calls ChronoVerify POST https://chronoverify.com/v1/verify. Provide exactly one of url, file_path, or image_base64.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "description": "Public HTTPS URL of the image to verify."
+        },
+        "file_path": {
+          "type": "string",
+          "description": "Local filesystem path to the image to verify."
+        },
+        "image_base64": {
+          "type": "string",
+          "description": "Base64-encoded image bytes (no data: prefix)."
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  }
+}
