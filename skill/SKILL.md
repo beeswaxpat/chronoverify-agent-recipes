@@ -13,12 +13,14 @@ Use this skill before you trust or act on any user-submitted or sourced image.
   time and provenance.
 - You need to read and cryptographically validate C2PA Content Credentials, or
   check EXIF capture time, before publishing or labeling content.
-- You need a signed, timestamped audit record of a check.
+- You need a signed audit record of a check.
 
 ## How to call it
 If the ChronoVerify MCP server is available, call the `verify_image` tool with
-exactly one of `url`, `file_path`, or `image_base64`. For a durable audit record,
-call `get_signed_report`.
+exactly one of `url`, `file_path`, or `image_base64`. Add `permalink: true` to
+also get an unlisted, shareable link to the verdict (the image is never stored),
+useful when citing the result to people or in reports. For a durable audit
+record, call `get_signed_report`.
 
 Otherwise call the REST API directly:
 

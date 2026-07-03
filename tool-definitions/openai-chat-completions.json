@@ -17,6 +17,10 @@
         "image_base64": {
           "type": "string",
           "description": "Base64-encoded image bytes (no data: prefix)."
+        },
+        "permalink": {
+          "type": "boolean",
+          "description": "Set true to also store the verdict (never the image) and get back an unlisted, shareable link to it in the response's permalink field. Keyless links expire after 90 days; links minted with an API key do not expire."
         }
       },
       "required": [],
